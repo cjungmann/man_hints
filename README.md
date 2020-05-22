@@ -75,12 +75,16 @@ These are **man** pages that help with **man** page development:
   occasional review.
 
 - __man 7 groff__ contains information about writing a
-  generic *groff* document.
-
-- __man 7 groff_man__ documents the markup/macros that can
-  be used to write a **man** page.  This **man** page was **not**
+  generic *groff* document.  It includes a lot of information
+  about writing *groff* documents, including special characters
+  and page formatting.  This **man** page was **not**
   included in my Ubuntu distribution.  See below for help
-  installing *groff-man(7)*.
+  installing *groff(7)*.
+
+- __man 7 groff_man__ documents the **man** page specific macros
+  that will help you create a standards-compliant **man** page.
+  This **man** page was **not** included in my Ubuntu distribution.
+  See below for help installing *groff-man(7)*.
 
 - I like to refer to a standard *groff* file of a **man**
   page.  I am referring to *asctime.3* because it not only
@@ -104,20 +108,39 @@ When reading the *groff man* page, I noticed that most of the
 **SEE ALSO** **man** pages were not installed on my computer.
 It was not easy to find or install these useful files.
 
-Sometimes, installing missing **man** pages is a simple as
+In some cases, installing missing **man** pages is as easy as
 invoking your package manager to install the -dev packages
-of software.
+of software.  These **man** pages, however, were not available
+in the Ubuntu package manager.
+
+The following instructions will guide you through downloading
+the *groff* documentation and installing two of the **man**
+pages.  If more **man** pages are needed, you can adapt these
+instructions to access them.  You may also have to adjust the
+filename of the download document, in which case you should
+also change the names in both sets of commands below.
 
 For the *groff*-related pages, navigate to this
 [Gnu Groff Sourceforge page](http://downloads.sourceforge.net/gnuwin32/groff-1.20.1-doc.zip).
 There are many subdirectories in this *zip* file.  You
 will find *groff_man.7 in `/man/man7`.
 
-To install *groff_man.7*, copy the following commands into a
-terminal window.
+To install *groff.7* and *groff_man.7*, copy the following
+sets of commands into a terminal window.
+
+First run this command alone so that your **sudo** password
+will be current for the subsequent commands:
 
 ~~~sh
 sudo wget http://downloads.sourceforge.net/gnuwin32/groff-1.20.1-doc.zip
+~~~
+
+With a current **sudo** password, these commands will run
+successfully:
+
+~~~sh
+sudo unzip groff-1.20.1-doc.zip man/man7/groff.7 -d /usr/share
+sudo gzip -f /usr/share/man/man7/groff.7
 sudo unzip groff-1.20.1-doc.zip man/man7/groff_man.7 -d /usr/share
 sudo gzip -f /usr/share/man/man7/groff_man.7
 ~~~
