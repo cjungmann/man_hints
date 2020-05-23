@@ -143,6 +143,7 @@ sudo unzip groff-1.20.1-doc.zip man/man7/groff.7 -d /usr/share
 sudo gzip -f /usr/share/man/man7/groff.7
 sudo unzip groff-1.20.1-doc.zip man/man7/groff_man.7 -d /usr/share
 sudo gzip -f /usr/share/man/man7/groff_man.7
+sudo cp -s /usr/share/man/man7/groff_man.7.gz /usr/share/man/man7/groff-man.7.gz
 ~~~
 
   
