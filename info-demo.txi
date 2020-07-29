@@ -45,21 +45,26 @@ TEXI format info document.
 
 @node Introduction
 @chapter Introduction
-This is the only page in this document
+Introduce your topic
+
 
 @node Build and install
 @chapter Build and install
 Enter the following commands to build and install an info file.
 
+@example
 sudo makeinfo info-demo.txi
 sudo gzip info-demo.info
 sudo mv info-demo.info.gz /usr/share/info
 sudo install-info /usr/share/info/info-demo.info.gz /usr/share/info/dir
+@end example
 
 Uninstall the info file:
 
+@example
 sudo install-info --delete /usr/share/info/info-demo.info.gz /usr/share/info/dir
 sudo rm -f /usr/share/info/info-demo.info.gz
+@end example
 
 
 @bye
