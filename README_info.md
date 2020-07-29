@@ -58,7 +58,7 @@ sudo install-info /usr/share/info/texinfo.info.gz /usr/share/info/dir
 ### Online Resources
 
 - [Texinfo - The GNU Documentation System](https://www.gnu.org/software/texinfo/)  
-  is page with many links.  Look through this page to find useful
+  is a page with many links.  Look through this page to find useful
   information for your situation.
 
 - [Linux Journal: What's GNU: Texinfo](https://www.linuxjournal.com/article/2840)  
