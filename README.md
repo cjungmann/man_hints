@@ -11,7 +11,7 @@ be a collection of instructions and tips that I hope will help
 with the writing of man pages.
 
 **NOTE:** Since an *info* page may also be appropriate for
-a software project, this [info demo](/README_info.md) may be of use.
+a software project, this [info demo](:doc:./README_info.md) may be of use.
 
 ## System Integration
 
