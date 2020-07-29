@@ -55,6 +55,9 @@ sudo mv texinfo.info.gz /usr/share/info
 sudo install-info /usr/share/info/texinfo.info.gz /usr/share/info/dir
 ~~~
 
+Please browse this reference.  You may find it contains all the
+information you need for developing **info** pages.
+
 ### Online Resources
 
 - [Texinfo - The GNU Documentation System](https://www.gnu.org/software/texinfo/)  
@@ -62,6 +65,11 @@ sudo install-info /usr/share/info/texinfo.info.gz /usr/share/info/dir
   information for your situation.
 
 - [Linux Journal: What's GNU: Texinfo](https://www.linuxjournal.com/article/2840)  
-  is one of the links on the above page.  It is helpful starting
-  point for developing an *info* page.
+  is one of the links on the GNU link at the top of this list.
+  It is helpful starting point for developing an *info* page.
+
+- [Texinfo Reference Card](http://git.savannah.gnu.org/cgit/texinfo.git/plain/doc/refcard/txirefcard.pdf)  
+  is sort of a cheatsheet for Texinfo.  I have found it relatively hard to
+  use because it's hard to scan the large amount of information, but
+  until I installed the **texinfo** info file, it was my best reference.
 
