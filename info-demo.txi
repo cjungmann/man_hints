@@ -1,0 +1,65 @@
+\input texinfo
+@setfilename info-demo.info
+@settitle Info File Template
+
+@c @dircategory and @direntry signal how to incorporate
+@c this content into the larger info environment.
+@c Consult the root `info` for direction, but in general
+@c try to add to an existing category and make the entry
+@c conform to existing entries.
+
+@c In this case, we make a new category, since there isn't an appropriate category
+@dircategory Documentation
+@direntry
+* info-demo: (info-demo).       Minimal info file template
+@end direntry
+
+@c copyright notice.  to be included in @titlepage with @insertcopying
+@copying
+Minimal info file template
+
+Copyright @copyright{} 2020 Charles P Jungmann
+@end copying
+
+@titlepage
+@title Minimal Info File Template
+@author Charles P. Jungmann
+@page
+@insertcopying
+@end titlepage
+
+
+@ifnottex
+@node Top
+@top 
+
+This document is a minimal, but fully-compilable and installable
+TEXI format info document.
+@end ifnottex
+
+@contents
+@menu
+* Introduction::
+* Build and install::
+@end menu
+
+@node Introduction
+@chapter Introduction
+This is the only page in this document
+
+@node Build and install
+@chapter Build and install
+Enter the following commands to build and install an info file.
+
+sudo makeinfo info-demo.txi
+sudo gzip info-demo.info
+sudo mv info-demo.info.gz /usr/share/info
+sudo install-info /usr/share/info/info-demo.info.gz /usr/share/info/dir
+
+Uninstall the info file:
+
+sudo install-info --delete /usr/share/info/info-demo.info.gz /usr/share/info/dir
+sudo rm -f /usr/share/info/info-demo.info.gz
+
+
+@bye
