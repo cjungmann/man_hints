@@ -10,6 +10,9 @@ relearn the process each time.  I am creating this project to
 be a collection of instructions and tips that I hope will help
 with the writing of man pages.
 
+**NOTE:** Since an *info* page may also be appropriate for
+a software project, this [info demo](README_info.md) may be of use.
+
 ## System Integration
 
 **man** pages are typically stored in `/usr/share/man/` and
