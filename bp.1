@@ -1,0 +1,87 @@
+.\" Man Page Template
+.\" Documenting Bogus Program: bp
+.\"
+.\" See `man -P 'less -p [[:space:]]+Title\ line$' man-pages`
+.TH BP 1 "04 March 2021" "Version 0.1"
+.SH NAME
+ bp \- Bogus Program for man Illustration
+.\"
+.SH SYNOPSIS
+.B bp
+.RI [ options "...] " operand
+.\"
+.SH DESCRIPTION
+.PP
+This manual page documents the imaginary program
+.BR bp .
+.B bp
+is a fictional program that is being imagined in order to demonstrate
+useful formatting for a
+.B man
+page.
+.PP
+This section can be brief with one or two paragraphs, or much longer,
+including options which otherwise might be in their own
+.B OPTIONS
+section.
+.PP
+I'm using the
+.B man
+pages for the commands
+.BR chown " and " du " as models for " groff " formatting" .
+If you are using
+.B emacs
+to edit, you can open the compressed
+.B man
+pages by opening the file.  Open the files using one or both of the
+following paths:
+.PP
+.I /usr/share/man/man1/chown.1.gz
+.br
+.I /usr/share/man/man1/du.1.gz
+.
+.\"
+.SH OPTIONS
+.PP
+.TP
+.BR -h ", " --help
+Show available options
+.TP
+.BR -s ", " --silent
+Don't write errors to STDOUT
+.PP
+This break in the options is accomplished with .PP to dedent the copy.
+You might want to do this to introduce groups of similar or related options.
+.TP
+.B -d
+Note how this text is displayed alongside the option when the option
+is short enough to fit entirely in the first column.  It's not necessary
+to change the
+.B groff
+formatting to accomplish this output formatting.
+
+.\"
+.SH NOTES
+.TP
+.B Use offline references
+In my mind, the whole point of
+.BR man " and " info
+pages is that they are quickly available with a few keystrokes.
+You don't need to open a browser and search or find a bookmark.
+You don't even need the internet.
+.
+The most useful
+.BI man " pages for writing " man
+pages are
+
+.B man 7 groff_man
+is particularly useful because it has a list of builtin
+.BR groff " macros."
+Note it's
+.BI groff_man ", not " groff-man ". (Use underscore, not hyphen)"
+
+
+
+
+.\"
+.SH EXAMPLES
