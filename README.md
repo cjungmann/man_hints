@@ -17,6 +17,23 @@ try another browser (**Firefox** worked for me).  Hopefully,
 this **Chrome** bug will be soon fixed and you can ignore this
 advice.
 
+## Using Man Pages (initial search)
+
+I just want to remember how to jump to a specific string
+in a **man** page.
+
+When writing a **man** mage, the first important line is the
+*title line*, introduced by **.TH**.  The reference for the
+title line contents is in the *man-pages* man page.  Jump
+directly to the title line instructions with:  
+`man -P 'less -p [[:space:]]+Title\ line$' man-pages `
+
+Notice we're using the **man** program's *-P* or **--pager** option
+to modify the pager program (**less**).  The **less** program is invoked
+with the *-p* or *--pattern* option to define the regular expression
+search string.  Note that the space between *Title* and *line* is escaped
+to indicate that the two words go together.
+
 ## System Integration
 
 **man** pages are typically stored in `/usr/share/man/` and
@@ -27,6 +44,10 @@ its subdirectories.
 - You will likely use the *groff* format to write **man**
   pages, though I've seen intermediate formats that can be
   converted to *groff*.
+
+- There is a sample/template man page in this repository,
+  **bp.1**.  It may be helpful to start a new **man** page
+  with a copy of this file.
 
 - The filename extension indicates the *section* to which
   the **man** page belongs.  Consult `man man-pages` for
